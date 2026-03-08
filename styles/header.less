@@ -1,0 +1,53 @@
+header {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+header h1 {
+  margin: 0 0 1rem 0;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li {
+  border-bottom: 1px solid @primary-separator-color;
+}
+
+header nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: @primary-text-color;
+  padding: 0.8rem 1rem;
+  transition: 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: @primary-separator-color;
+  border-radius: 8px;
+}
+
+@media (min-width: 720px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  header nav ul li {
+    border-bottom: none;
+  }
+}
